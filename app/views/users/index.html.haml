@@ -1,13 +1,18 @@
+%head Mundane Heroes
+
 %h1 Login
 
-%form
-  = label :user, :email, "Username"
-  = text_field :user, :email
-  = label :user, :password
+= form_tag users_path, :method =>  :get do 
+ 
+  = label :user, :username, 'Username'
+  = text_field :user, :username
+ 
+  = label :user, :password, 'Password'
   = password_field :user, :password
-  %input{:type => "submit", :value => "Sign in"}
 
-%h2 Create User
+  = submit_tag 'Play'
+
+%h1 Create User
  
 = form_tag users_path, :method => :post do
  
@@ -17,4 +22,4 @@
   = label :user, :password, 'Password'
   = password_field :user, :password
 
-  = submit_tag 'New user'
+  = submit_tag 'Make Account'
