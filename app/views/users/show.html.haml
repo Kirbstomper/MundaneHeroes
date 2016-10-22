@@ -1,10 +1,11 @@
+%h1 Mundane Heroes
 Welcome to Mundane Heroes
 
 %li
   Username:
   =@user.username
-  
-%h1 Your Games
+<div>  
+%h2 Your Games
 %table#games
   %thead
   -@games.each do |game|
@@ -14,7 +15,10 @@ Welcome to Mundane Heroes
       %td= game.description
       %td= link_to "View", game_path(game)
 =link_to "create new game", new_game_path
+</div>
 
-%h1 Join a game
+<div>
+%h2 Join a game
 =link_to "play a game"
+</div>
   

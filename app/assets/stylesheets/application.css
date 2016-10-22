@@ -13,27 +13,49 @@
  *= require_tree .
  *= require_self
  */
+
+
  
  body {
       font-family: "Franklin Gothic Medium", "Rockwell", sans-serif;
      font-size: 15px;
-     font-weight: bold;
-     color: #0004FF;
+     color: #000000;
      background-image:url("backgroundMundane.jpg");
-     background-size:1366px, 768px;
+     background-size:100%, 100%;
      background-repeat:no-repeat;
+     text-align:center;
+
+ }
+ 
+  div {
+     margin-top:200px;
+     background-color:blue;
+     text-align:left;
+     margin-left:10%;
+     margin-right:50%;
+ }
+ 
+ #lolcats {
+     margin-top:-90px;
+     background:linear-gradient(to left, white 0%, red 100%);
+     margin-left:50%;
+     margin-right:10%;
+  
  }
  
  h1 {
      font-family: "Franklin Gothic Medium", "Rockwell", sans-serif;
-     font-size: 25px;
+     font-size: 45px;
      font-weight: bold;
-     color: #0004FF;
+     margin-top:10px;
+     color: purple;
+     text-shadow: 4px 4px #5e3958;
  }
  
  h2 {
      font-family: "Franklin Gothic Medium", "Rockwell", sans-serif;
      font-size: 25px;
      font-weight: bold;
-     color: #0004FF;
+     color: #000000;
  }
+ 
