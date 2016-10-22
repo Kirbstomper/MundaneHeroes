@@ -29,7 +29,7 @@ class GamesController < ApplicationController
   def update
     @game = Game.find params[:id]
     @game.update_attributes!(game_edit_params)
-    redirect_to users_path(@game)
+    redirect_to users_path(session[:id])
   end
   
     private
