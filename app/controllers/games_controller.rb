@@ -3,6 +3,7 @@ class GamesController < ApplicationController
     redirect_to users_path
   end
   
+  def 
   def create
     @game = Game.create(game_params)
     @game.gm_id= session[:id]
