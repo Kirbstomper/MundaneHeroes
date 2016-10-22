@@ -5,14 +5,45 @@ class UsersController < ApplicationController
       redirect_to user_path(session[:id])
     end
   end
-  
-  
-  def create
-    @user = User.create!(user_params)  # new way
-    @user.password = params[:password]
-    flash[:notice] = "#{@user.username} was successfully created."
-    redirect_to user_path(@user)
+  def new
   end
+  
+  def login
+    user = User.find_by(username: params[:username])
+    if user &&user.authenticate(params[:password])
+      session[:id] = user.id
+      redirect_to user_path(session[:id])
+    else
+      flash[:notice] = "YOU FUCKED UP"
+      redirect_to users_path
+    end
+  end
+
+  
+  def logout
+    session.clear
+    redirect_to users_path
+  end
+  def create
+    user = User.find_by_username(params[:user][:username])
+    if user!=nil
+      if user.authenticate(params[:user][:password])
+        session[:id] = user.id
+        redirect_to user_path(session[:id])
+      else
+        flash[:notice] = "YOU FUCKED UP"
+        redirect_to users_path
+      end
+  
+
+    else
+      @user = User.create!(user_params)  # new way
+      @user.password = params[:password]
+      flash[:notice] = "#{@user.username} was successfully created."
+      redirect_to user_path(@user)
+    end
+  end
+  
   
   
   def show
@@ -23,6 +54,7 @@ class UsersController < ApplicationController
   end
     
   private
+  
   def user_params
     params.require(:user).permit(:username,:password)
   end

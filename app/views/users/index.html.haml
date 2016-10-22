@@ -4,11 +4,11 @@
 <div>
 %h2 Login
 
-= form_tag users_path, :method =>  :get do 
+= form_tag users_path, :method => :post do
  
   = label :user, :username, 'Username'
   = text_field :user, :username
- 
+  
   = label :user, :password, 'Password'
   = password_field :user, :password
 
