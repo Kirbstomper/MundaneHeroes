@@ -20,7 +20,7 @@
       font-family: "Franklin Gothic Medium", "Rockwell", sans-serif;
      font-size: 15px;
      color: #000000;
-     background-image:url("backgroundMundane.jpg");
+     background-image:url("Publication4.jpg");
      background-size:100%, 100%;
      background-repeat:no-repeat;
      text-align:center;
@@ -31,8 +31,14 @@
      margin-top:200px;
      background-color:blue;
      text-align:left;
-     margin-left:10%;
-     margin-right:50%;
+
+ }
+ 
+ #regularStuff {
+   margin-left:10%;
+   margin-right:50%;
+   background-color:purple;
+   opacity:  0.5;
  }
  
  #lolcats {
@@ -58,4 +64,3 @@
      font-weight: bold;
      color: #000000;
  }
- 
