@@ -17,4 +17,4 @@
 
 = link_to 'Edit', edit_game_path(@game)
 = button_to 'Delete', game_path(@game), :method => :delete, :confirm => 'Are you sure?'
-= link_to 'Back to game list', user_path
+= link_to 'Back to game list', user_path(session[:id])
