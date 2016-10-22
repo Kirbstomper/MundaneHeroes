@@ -1,0 +1,12 @@
+%h1 Edit Game Information
+
+= form_tag game_path(@game), :method => :put do
+
+  = label :game, :game_title, 'Title'
+  = text_field :game, 'game_title'
+
+  = label :game, :description, 'Description'
+  = text_field :game, 'description'
+
+
+  = submit_tag 'Update Game Information'

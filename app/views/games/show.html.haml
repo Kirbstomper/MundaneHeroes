@@ -1,0 +1,20 @@
+%h2 Game Information
+
+%ul#details
+  %li
+    Title:
+    = @game.game_title
+  %li
+    GameID:
+    = @game.game_id
+
+%h3 Description:
+
+%p#description= @game.description
+
+%h4 Player Status
+
+
+= link_to 'Edit', edit_game_path(@game)
+= button_to 'Delete', game_path(@game), :method => :delete, :confirm => 'Are you sure?'
+= link_to 'Back to game list', user_path
