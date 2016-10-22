@@ -1,0 +1,12 @@
+%h1 Create new Game
+
+= form_tag games_path :method=> :post do
+
+  = label :game, :game_title, 'Title'
+  = text_field :game, 'game_title'
+
+  = label :game, :game_id, 'Game_ID'
+  = text_field :game, 'game_id'
+  
+
+  = submit_tag 'Save Changes'

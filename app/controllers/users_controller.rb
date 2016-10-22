@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
   
   def index
-    @users = User.all
+    if session[:id]
+      redirect_to user_path(session[:id])
+    end
   end
   
   
@@ -17,6 +19,7 @@ class UsersController < ApplicationController
     id = params[:id] # retrieve movie ID from URI route
     @user = User.find(id) # look up movie by unique ID
     session[:id] = id
+    @games = Game.where(gm_id: session[:id])
   end
     
   private

@@ -3,10 +3,17 @@ Welcome to Mundane Heroes
 %li
   Username:
   =@user.username
-  =@user.password
-%h1 Your games
   
-=link_to "create new game"
+%h1 Your Games
+%table#games
+  %thead
+  -@games.each do |game|
+    %tr
+      %td= game.game_title
+      %td= game.game_id
+      %td= game.description
+
+=link_to "create new game", new_game_path
 
 %h1 Join a game
 =link_to "play a game"
