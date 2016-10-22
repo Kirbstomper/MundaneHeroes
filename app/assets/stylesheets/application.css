@@ -15,22 +15,24 @@
  */
  
  body {
-     font-family: "Comic Sans MS", cursive, sans-serif;
+      font-family: "Franklin Gothic Medium", "Rockwell", sans-serif;
      font-size: 15px;
      font-weight: bold;
      color: #0004FF;
-     background-color:#FFFB00;
+     background-image:url("backgroundMundane.jpg");
+     background-size:1366px, 768px;
+     background-repeat:no-repeat;
  }
  
  h1 {
-     font-family: "Comic Sans MS", cursive, sans-serif;
+     font-family: "Franklin Gothic Medium", "Rockwell", sans-serif;
      font-size: 25px;
      font-weight: bold;
      color: #0004FF;
  }
  
  h2 {
-     font-family: "Comic Sans MS", cursive, sans-serif;
+     font-family: "Franklin Gothic Medium", "Rockwell", sans-serif;
      font-size: 25px;
      font-weight: bold;
      color: #0004FF;
