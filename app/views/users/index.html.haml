@@ -1,7 +1,8 @@
 %h1 Mundane Heroes
 //div class for special stuff
 
-<div>
+<div id= "standardTrans">
+<div id= "insideCenter">
 %h2 Login
 
 = form_tag users_path, :method =>  :get do 
@@ -17,7 +18,7 @@
   
   
   
-<div id= "lolcats">
+<div id= "insideCenter">
 %h2 Create User
 
  
@@ -30,4 +31,5 @@
   = password_field :user, :password
 
   = submit_tag 'Make Account'
+  </div>
   </div>

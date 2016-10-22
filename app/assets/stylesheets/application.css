@@ -27,25 +27,23 @@
 
  }
  
-  div {
-     margin-top:200px;
-     background-color:blue;
-     text-align:left;
+div {
+ 
+}
+ 
+ #standardTrans {
 
- }
- 
- #regularStuff {
+   background:rgba(186, 143, 00, 0.3);
    margin-left:10%;
-   margin-right:50%;
-   background-color:purple;
-   opacity:  0.5;
+    margin-right:10%;
  }
  
- #lolcats {
-     margin-top:-90px;
-     background:linear-gradient(to left, white 0%, red 100%);
-     margin-left:50%;
-     margin-right:10%;
+ #insideCenter {
+     margin-top:25px;
+     background-color:purple;
+     opacity:1.0;
+     margin-left:20%;
+     margin-right:20%;
   
  }
  
