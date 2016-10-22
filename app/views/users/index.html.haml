@@ -2,7 +2,6 @@
 //div class for special stuff
 
 <div>
-<div id= "lolcats">
 %h2 Login or Create New User
 
 = form_tag users_path, :method => :post do
@@ -18,6 +17,17 @@
   
   
   
+<div id= "lolcats">
+%h2 Create User
 
+ 
+= form_tag users_path, :method => :post do
+ 
+  = label :user, :username, 'Username'
+  = text_field :user, :username
+ 
+  = label :user, :password, 'Password'
+  = password_field :user, :password
 
-</div>
+  = submit_tag 'Make Account'
+  </div>
