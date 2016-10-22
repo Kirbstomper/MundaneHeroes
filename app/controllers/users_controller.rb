@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     @user = User.create!(user_params)  # new way
     @user.password = params[:password]
     flash[:notice] = "#{@user.username} was successfully created."
-    redirect_to users_path
+    redirect_to user_path(@user)
   end
   
   
