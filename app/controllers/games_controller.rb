@@ -6,6 +6,7 @@ class GamesController < ApplicationController
   def show
     id = params[:id]
     @game = Game.find(id)
+    @characters = Character.where(game_id: @game.game_id)
   end
   
   def create
@@ -17,6 +18,7 @@ class GamesController < ApplicationController
   
   def destroy
     @game = Game.find params[:id]
+    Character.delete_all(game_id: @game.game_id)
     @game.destroy
     flash[:notice] = "Game was deleted"
     redirect_to users_path
