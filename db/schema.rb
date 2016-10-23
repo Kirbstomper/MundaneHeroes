@@ -11,7 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161022144510) do
+ActiveRecord::Schema.define(version: 20161022191857) do
+
+  create_table "characters", force: :cascade do |t|
+    t.string   "game_id"
+    t.integer  "user_id"
+    t.string   "name"
+    t.integer  "power_id"
+    t.integer  "str"
+    t.integer  "per"
+    t.integer  "end"
+    t.integer  "cha"
+    t.integer  "dex"
+    t.integer  "int"
+    t.integer  "luck"
+    t.integer  "cur_hp"
+    t.integer  "max_hp"
+    t.integer  "luck_points"
+    t.integer  "damage_melee"
+    t.integer  "damage_range"
+    t.text     "inventory"
+    t.text     "interest"
+    t.integer  "ap"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "games", force: :cascade do |t|
     t.string   "game_title"

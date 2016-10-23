@@ -1,0 +1,40 @@
+%h1 Mundane Heroes
+<div>
+
+
+%h2 Create new Character
+= "YOUR POWER IS #{Power.find(session[:pow]).name}"
+
+= form_tag characters_path :method=> :post do
+  
+  = label :character, :game_id, 'Game ID'
+  = text_field :character, 'game_id'
+  
+  = label :character, :name, 'Name'
+  = text_field :character, 'name'
+
+  = label :character, :str, 'Strengh'
+  = text_field :character, 'str'
+  
+  = label :character, :per, 'Perception'
+  = text_field :character, 'per'
+  
+  = label :character, :end, 'Endurance'
+  = text_field :character, 'end'
+  
+  = label :character, :cha, 'Charisma'
+  = text_field :character, 'cha'
+  
+  = label :character, :dex, 'Dexterity'
+  = text_field :character, 'dex'
+  
+  = label :character, :int, 'Int'
+  = text_field :character, 'int'
+  
+  = label :character, :luck, 'Luck'
+  = text_field :character, 'luck'
+  
+  
+
+  = submit_tag 'Save Changes'
+  </div>

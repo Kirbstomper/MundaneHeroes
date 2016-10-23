@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   
   def index
     if session[:id]
-      redirect_to user_path(session[:id])
+      redirect_to user_path(session[:id]) and return
     end
   end
   def new
@@ -13,9 +13,11 @@ class UsersController < ApplicationController
     if user &&user.authenticate(params[:password])
       session[:id] = user.id
       redirect_to user_path(session[:id])
+      return
     else
       flash[:notice] = "YOU FUCKED UP"
       redirect_to users_path
+      return
     end
   end
 
@@ -51,6 +53,9 @@ class UsersController < ApplicationController
     @user = User.find(id) # look up movie by unique ID
     session[:id] = id
     @games = Game.where(gm_id: session[:id])
+    @characters = Character.where(user_id: session[:id])
+    pow = Power.find(rand(1..Power.count))
+    session[:pow] = pow.id
   end
     
   private

@@ -5,6 +5,6 @@ MundaneHeroes::Application.routes.draw do
   post '/login', to: 'users#login', via: [:destroy], as: :login
   
    resources :games
-   
+   resources :characters
    
 end

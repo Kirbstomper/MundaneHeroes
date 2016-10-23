@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  game_id: 1
+  user_id: 1
+  name: MyString
+  power_id: 1
+  str: 1
+  per: 1
+  end: 1
+  cha: 1
+  dex: 1
+  int: 1
+  luck: 1
+  cur_hp: 1
+  max_hp: 1
+  luck_points: 1
+  damage_melee: 1
+  damage_range: 1
+  inventory: MyText
+  interest: MyText
+
+two:
+  game_id: 1
+  user_id: 1
+  name: MyString
+  power_id: 1
+  str: 1
+  per: 1
+  end: 1
+  cha: 1
+  dex: 1
+  int: 1
+  luck: 1
+  cur_hp: 1
+  max_hp: 1
+  luck_points: 1
+  damage_melee: 1
+  damage_range: 1
+  inventory: MyText
+  interest: MyText
