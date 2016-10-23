@@ -17,9 +17,16 @@ Welcome to Mundane Heroes
       %td= link_to "View", game_path(game)
 =link_to "Create new Game", new_game_path
 </div>
-
+%table#games
+  %thead
+  -@characters.each do |character|
+    %tr
+      %td= character.name
+      %td= character.game_id
+      %td= link_to "View"
 <div>
 %h2 Join a game
-=link_to "Join a game"
+
+=link_to "Join a game", new_character_path
 </div>
   
