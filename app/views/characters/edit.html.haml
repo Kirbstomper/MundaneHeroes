@@ -1,0 +1,21 @@
+%h1 Mundane Heroes
+<div>
+%h2 Update Character Sheet
+
+= form_tag character_path(@character), :method => :put do
+
+  = label :character, :cur_hp, 'Current HP'
+  = text_field :character, 'cur_hp'
+
+  = label :character, :luck_points, 'Luck Points'
+  = text_field :character, 'luck_points'
+  
+  = label :character, :interest, 'Interests'
+  = text_field :character, 'interest'
+  
+  = label :character, :inventory, 'Inventory'
+  = text_field :character, 'inventory'
+  
+  
+  = submit_tag 'Update Character Sheet'
+</div>

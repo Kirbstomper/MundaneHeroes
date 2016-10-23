@@ -55,6 +55,16 @@ class CharactersController < ApplicationController
   def new
   end
   
+  def edit
+    @character = Character.find params[:id]
+  end
+  
+  def update
+    @character = Character.find params[:id]
+    @character.update_attributes!(char_edit_params)
+    redirect_to character_path(@character.id)
+  end
+  
   def destroy
     @character = Character.find params[:id]
     @character.destroy
@@ -67,5 +77,8 @@ class CharactersController < ApplicationController
     params.require(:character).permit(:game_id,:name,:str,:per,:end,:cha,:dex,:int,:luck)
   end
   
+  def char_edit_params
+    params.require(:character).permit(:cur_hp,:luck_points,:interest,:inventory)
+  end
   
 end
