@@ -17,8 +17,20 @@
     Action Points:
     = @character.ap
   %li
+    Luck Points:
+    = @character.luck_points
+  %li
+    Melee Damage:
+    = "#{@character.damage_melee}/#{@character.damage_melee+2}"
+  %li
+    Ranged Damage:
+    = "#{@character.damage_range}/#{@character.damage_range+1}"
+  %li
     Strength:
     = @character.str
+  %li
+    Perception:
+    = @character.per
   %li
     Endurance:
     = @character.end
@@ -32,15 +44,17 @@
     Luck:
     = @character.luck
   %li
-    Name:
-    = @character.name
-%h3 Description:
+    Dexterity:
+    = @character.dex
+  
+    
+    
+%h3 Interests:
+=@character.interest
+%h3 Inventory:
+=@character.inventory
 
 
-
-%h4 Player Status
-
-
-= link_to 'Edit'
+= link_to 'Edit', edit_character_path(@character)
 = button_to 'Delete', character_path(@character), :method => :delete, :confirm => 'Are you sure?'
 = link_to 'Back to game list', user_path(session[:id])
