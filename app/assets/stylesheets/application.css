@@ -19,8 +19,8 @@
  body {
       font-family: "Franklin Gothic Medium", "Rockwell", sans-serif;
      font-size: 15px;
-     color: #000000;
-     background-image:url("Publication4.jpg");
+     color: white;
+     background-image:url("download.png");
      background-size:100%, 100%;
      background-repeat:no-repeat;
      text-align:center;
@@ -33,9 +33,10 @@ div {
  
  #standardTrans {
 
-   background:rgba(186, 143, 00, 0.3);
+   background:rgba(200, 200, 200, 0.3);
    margin-left:10%;
     margin-right:10%;
+    margin-bottom:10%;
  }
  
  #insideCenter {
@@ -52,13 +53,13 @@ div {
      font-size: 45px;
      font-weight: bold;
      margin-top:10px;
-     color: purple;
-     text-shadow: 4px 4px #5e3958;
+     color: white;
+     text-shadow: 4px 4px #757575;
  }
  
  h2 {
      font-family: "Franklin Gothic Medium", "Rockwell", sans-serif;
      font-size: 25px;
      font-weight: bold;
-     color: #000000;
+     color: white;
  }

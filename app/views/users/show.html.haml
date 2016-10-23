@@ -6,7 +6,6 @@ Welcome to Mundane Heroes
   =@user.username
   =link_to "logout", logout_path
 <div id= "standardTrans">
-<div id= "insideCenter">
 %h2 Your Games
 %table#games
   %thead
@@ -17,10 +16,9 @@ Welcome to Mundane Heroes
       %td= game.description
       %td= link_to "View", game_path(game)
 =link_to "Create new Game", new_game_path
-</div>
+
 <<<<<<< HEAD
 
-<div id= "insideCenter">
 =======
 %table#games
   %thead
@@ -29,7 +27,7 @@ Welcome to Mundane Heroes
       %td= character.name
       %td= character.game_id
       %td= link_to "View"
-<div>
+
 >>>>>>> ce4fcca50ee073d6730996b716818c0a87d7daca
 %h2 Join a game
 
