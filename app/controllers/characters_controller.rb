@@ -48,9 +48,18 @@ class CharactersController < ApplicationController
   end
   
   def show
+    id = params[:id]
+    @character = Character.find(id)
   end
   
   def new
+  end
+  
+  def destroy
+    @character = Character.find params[:id]
+    @character.destroy
+    flash[:notice] = "Player was deleted"
+    redirect_to users_path
   end
   
   private

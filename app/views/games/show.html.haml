@@ -12,7 +12,14 @@
 
 %p#description= @game.description
 
-%h4 Player Status
+%h2 Characters
+%table#games
+  %thead
+  -@characters.each do |character|
+    %tr
+      %td= character.name
+      %td= character.game_id
+      %td= link_to "View", character_path(character)
 
 
 = link_to 'Edit', edit_game_path(@game)

@@ -1,0 +1,46 @@
+%h2 Character Sheet
+
+%ul#details
+  %li
+    Name:
+    = @character.name
+  %li
+    Power:
+    = Power.find(@character.power_id).name
+  %li
+    GameID:
+    = @character.game_id
+  %li
+    Health:
+    = "#{@character.cur_hp}/#{@character.max_hp}" 
+  %li
+    Action Points:
+    = @character.ap
+  %li
+    Strength:
+    = @character.str
+  %li
+    Endurance:
+    = @character.end
+  %li
+    Int:
+    = @character.int
+  %li
+    Charisma:
+    = @character.cha
+  %li
+    Luck:
+    = @character.luck
+  %li
+    Name:
+    = @character.name
+%h3 Description:
+
+
+
+%h4 Player Status
+
+
+= link_to 'Edit'
+= button_to 'Delete', character_path(@character), :method => :delete, :confirm => 'Are you sure?'
+= link_to 'Back to game list', user_path(session[:id])
