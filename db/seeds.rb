@@ -23,12 +23,16 @@ produce is incredibly inaccurate.  When you make an attack of this nature you mu
           {:name => "All Knowing Forgetfull", :description =>"Omniscient with Alzheimer's"},
           {:name => "Hatception", :description =>"Everybody you meet thinks you are wearing a hat"},
           {:name => "ToddlerMancy", :description =>"You have the ability to summon a toddler"},
-          {:name => "Democation", :description =>"you can talk to demons"},
-          {:name => "", :description =>""},
-          {:name => "", :description =>""},
-          {:name => "", :description =>""},
-          {:name => "", :description =>""},
-          {:name => "", :description =>""},
+          {:name => "Demunication", :description =>"You can talk to demons"},
+          {:name => "Frictionless", :description =>"You have the ability to become ultra slippery"},
+          {:name => "Laser Eye Care", :description =>"You have laser vision, BUT IT BURNS YOUR EYES!"},
+          {:name => "Holo-There", :description =>"You can create a hologram of a specific famous person"},
+          {:name => "Cry Baby", :description =>"Seventy percent of the human body is composed of water.  You have the ability to use	
+this water by shooting it out of your eyes at extremely high velocity.  Once per turn you may use this ability as a special attack on any target within line of sight.  Hitting a target with this attacks causes them to suffer two damage and be knocked backwards five squares.  However, using this power quickly dehydrates you.  After using this power once you must expend three action points to rehydrate enough to use it again.
+ "},
+          {:name => "Hurt for a second", :description =>"You can heal any wound with salt in it"},
+          {:name => "Wrong Rabbit Hole", :description =>"You can pull a hat out of a rabbit "},
+          {:name => "InvisiNOPE", :description =>"Become invisible ot someone who is already looking for you"}
           
           
           ]
