@@ -6,6 +6,9 @@ class GamesController < ApplicationController
   def show
     id = params[:id]
     @game = Game.find(id)
+    if @game.gm_id != session[:id]
+      redirect_to users_path and return
+    end
     @characters = Character.where(game_id: @game.game_id)
   end
   

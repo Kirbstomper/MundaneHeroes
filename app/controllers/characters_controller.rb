@@ -50,6 +50,9 @@ class CharactersController < ApplicationController
   def show
     id = params[:id]
     @character = Character.find(id)
+    if @character.user_id!=session[:id] || Game.find_by_game_id(@character.game_id)!=session[:id]
+      redirect_to users_path and return
+    end
   end
   
   def new

@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     user = User.find_by(username: params[:username])
     if user &&user.authenticate(params[:password])
       session[:id] = user.id
-      redirect_to user_path(session[:id])
+      redirect_to user_path(session[:id]) and return
       return
     else
       flash[:notice] = "YOU FUCKED UP"
@@ -34,7 +34,7 @@ class UsersController < ApplicationController
         redirect_to user_path(session[:id])
       else
         flash[:notice] = "YOU FUCKED UP"
-        redirect_to users_path
+        redirect_to users_path and return
       end
   
 
@@ -50,12 +50,16 @@ class UsersController < ApplicationController
   
   def show
     id = params[:id] # retrieve movie ID from URI route
-    @user = User.find(id) # look up movie by unique ID
-    session[:id] = id
-    @games = Game.where(gm_id: session[:id])
-    @characters = Character.where(user_id: session[:id])
-    pow = Power.find(rand(1..Power.count))
-    session[:pow] = pow.id
+    @user = User.find(id) # look up user by unique ID
+    if session[:id] == @user.id
+      @games = Game.where(gm_id: session[:id])
+      @characters = Character.where(user_id: session[:id])
+      pow = Power.find(rand(1..Power.count))
+      session[:pow] = pow.id
+    else
+      redirect_to users_path
+    end
+   
   end
     
   private
