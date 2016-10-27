@@ -11,37 +11,7 @@ class CharactersController < ApplicationController
     end
     
     char = Character.create!(char_params)
-    char.user_id = session[:id]
-    char.power_id= session[:pow]
-    #Case statements for each stat to decide real stats
-    char.damage_melee = char.str+2
-    if char.str = 4
-      char.damage_melee +=1
-    end
-    #perception
-    char.damage_range = char.per+1
-    #endurance
-    char.max_hp = ((char.end*5)+10)
-    char.cur_hp = char.max_hp
-    #luck
-    
-    char.luck_points = char.luck-1
-    
-    #dex
-    case char.dex
-    when 0
-      char.ap = 3
-    when 1
-      char.ap = 4
-    when 2
-      char.ap = 5
-    when 3
-      char.ap = 5
-    when 4
-      char.ap = 7
-    end
-    
-    char.save!
+    char.allocate_stats(session[:id], session[:pow])
     #Updates variables inside of the regular class
     redirect_to user_path(session[:id])
     
@@ -50,7 +20,7 @@ class CharactersController < ApplicationController
   def show
     id = params[:id]
     @character = Character.find(id)
-    if @character.user_id!=session[:id] || Game.find_by_game_id(@character.game_id)!=session[:id]
+    if @character.user_id != session[:id] and Game.find_by_game_id(@character.game_id).gm_id !=session[:id]
       redirect_to users_path and return
     end
   end
