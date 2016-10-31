@@ -7,6 +7,17 @@ class CharactersController < ApplicationController
     points_spent =(  params[:character][:str].to_i + params[:character][:per].to_i+ params[:character][:int].to_i + params[:character][:end].to_i+ params[:character][:cha].to_i + params[:character][:dex].to_i + params[:character][:luck].to_i)
     
     if points_spent!= 15 
+      if points_spent<15
+        flash[:notice] = "Your stat total is too low, please try again"
+      
+      elsif points_spent>15
+        flash[:notice] = "Your stat total is too high, please try again"
+      end      
+      redirect_to new_character_path and return
+    end
+    
+    if Game.find_by_game_id(params[:character][:game_id]) == nil
+      flash[:notice] = "The game you are trying to join does not exist"
       redirect_to new_character_path and return
     end
     

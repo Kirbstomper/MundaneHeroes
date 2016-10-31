@@ -1,7 +1,6 @@
 %h1 Mundane Heroes
 <div>
-
-
+#notice.message= flash[:notice]
 %h2 Create new Character
 = "YOUR POWER IS #{Power.find(session[:pow]).name}"
 

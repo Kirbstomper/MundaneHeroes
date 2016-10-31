@@ -8,24 +8,11 @@ class UsersController < ApplicationController
   def new
   end
   
-  def login
-    user = User.find_by(username: params[:username])
-    if user &&user.authenticate(params[:password])
-      session[:id] = user.id
-      redirect_to user_path(session[:id]) and return
-      return
-    else
-      flash[:notice] = "YOU FUCKED UP"
-      redirect_to users_path
-      return
-    end
-  end
-
-  
   def logout
     session.clear
     redirect_to users_path
   end
+  
   def create
     user = User.find_by_username(params[:user][:username])
     if user!=nil
@@ -33,7 +20,7 @@ class UsersController < ApplicationController
         session[:id] = user.id
         redirect_to user_path(session[:id])
       else
-        flash[:notice] = "YOU FUCKED UP"
+        flash[:notice] = "You have entered the wrong username/password"
         redirect_to users_path and return
       end
   
@@ -41,7 +28,7 @@ class UsersController < ApplicationController
     else
       @user = User.create!(user_params)  # new way
       @user.password = params[:password]
-      flash[:notice] = "#{@user.username} was successfully created."
+      flash[:notice] = "Your account was sucessfully created, please log in below"
       redirect_to user_path(@user)
     end
   end

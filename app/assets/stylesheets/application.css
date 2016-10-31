@@ -63,3 +63,9 @@ div {
      font-weight: bold;
      color: white;
  }
+ 
+ #notice #warning {
+  background: rosybrown;
+  margin: 1em 0;
+  padding: 4px;
+}
