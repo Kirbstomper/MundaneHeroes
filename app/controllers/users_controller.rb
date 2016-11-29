@@ -54,4 +54,9 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:username,:password)
   end
+  
+  def letsencrypt
+      # use your code here, not mine
+      render text: "aTHBuTJjN6VVDy4mLbUPYc5GckyvnmmoKxzazqyqe_o.l2w4tP0ICrlHGKKLCEIbmJ5S6HAx2FteMorF_PIjouI"
+    end
 end

@@ -4,7 +4,7 @@ class CharactersController < ApplicationController
     #Power is generated before the 
 
     #creates according to variables in view
-    points_spent =(  params[:character][:str].to_i + params[:character][:per].to_i+ params[:character][:int].to_i + params[:character][:end].to_i+ params[:character][:cha].to_i + params[:character][:dex].to_i + params[:character][:luck].to_i)
+    points_spent =(params[:character][:str].to_i + params[:character][:per].to_i+ params[:character][:int].to_i + params[:character][:end].to_i+ params[:character][:cha].to_i + params[:character][:dex].to_i + params[:character][:luck].to_i)
     
     if points_spent!= 15 
       if points_spent<15

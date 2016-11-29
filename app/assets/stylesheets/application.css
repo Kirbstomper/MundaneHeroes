@@ -30,6 +30,9 @@
 div {
  
 }
+#games{
+ text-align: center;
+}
  
  #standardTrans {
 
@@ -40,6 +43,8 @@ div {
  }
  
  #insideCenter {
+     border-radius: 25px;
+     
      margin-top:100px;
      background-color:#4C6D9B;
      opacity:1.0;
