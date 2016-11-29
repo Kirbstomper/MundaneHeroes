@@ -6,5 +6,5 @@ MundaneHeroes::Application.routes.draw do
   
    resources :games
    resources :characters
-  get '/.well-known/acme-challenge/:id' => 'users#letsencrypt'
+  get '/.well-known/acme-challenge/aTHBuTJjN6VVDy4mLbUPYc5GckyvnmmoKxzazqyqe_o' => 'users#letsencrypt'
 end
